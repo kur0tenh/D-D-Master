@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31B8E7971E8219480060C030 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 31B8E7961E8219480060C030 /* libsqlite3.tbd */; };
+		31B8E7AA1E821B270060C030 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 31B8E7A41E821B270060C030 /* Info.plist */; };
+		31C9641C1E8200B00072F37F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9641B1E8200B00072F37F /* MainViewController.swift */; };
 		A20FCFBF1E81B6EC00557A5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20FCFBE1E81B6EC00557A5C /* AppDelegate.swift */; };
-		A20FCFC11E81B6EC00557A5C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20FCFC01E81B6EC00557A5C /* FirstViewController.swift */; };
-		A20FCFC31E81B6EC00557A5C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20FCFC21E81B6EC00557A5C /* SecondViewController.swift */; };
 		A20FCFC61E81B6EC00557A5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A20FCFC41E81B6EC00557A5C /* Main.storyboard */; };
 		A20FCFC81E81B6EC00557A5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A20FCFC71E81B6EC00557A5C /* Assets.xcassets */; };
 		A20FCFCB1E81B6EC00557A5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A20FCFC91E81B6EC00557A5C /* LaunchScreen.storyboard */; };
 		A20FCFD61E81B6EC00557A5C /* D_D_MasterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20FCFD51E81B6EC00557A5C /* D_D_MasterTests.swift */; };
 		A20FCFE11E81B6EC00557A5C /* D_D_MasterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20FCFE01E81B6EC00557A5C /* D_D_MasterUITests.swift */; };
+		A2367DF11E82F9B9008BFC43 /* puente.m in Sources */ = {isa = PBXBuildFile; fileRef = A2367DF01E82F9B9008BFC43 /* puente.m */; };
+		A237A4091E832087004D4E22 /* PickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A237A4081E832087004D4E22 /* PickerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		31B8E7961E8219480060C030 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		31B8E7981E821B260060C030 /* D&D-Master-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "D&D-Master-Bridging-Header.h"; sourceTree = "<group>"; };
+		31B8E7A41E821B270060C030 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = fmdb/src/fmdb/Info.plist; sourceTree = "<group>"; };
+		31C9641B1E8200B00072F37F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A20FCFBB1E81B6EC00557A5C /* D&D-Master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "D&D-Master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A20FCFBE1E81B6EC00557A5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A20FCFC01E81B6EC00557A5C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		A20FCFC21E81B6EC00557A5C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		A20FCFC51E81B6EC00557A5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A20FCFC71E81B6EC00557A5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A20FCFCA1E81B6EC00557A5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +54,8 @@
 		A20FCFDC1E81B6EC00557A5C /* D&D-MasterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "D&D-MasterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A20FCFE01E81B6EC00557A5C /* D_D_MasterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D_D_MasterUITests.swift; sourceTree = "<group>"; };
 		A20FCFE21E81B6EC00557A5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2367DF01E82F9B9008BFC43 /* puente.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = puente.m; sourceTree = "<group>"; };
+		A237A4081E832087004D4E22 /* PickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31B8E7971E8219480060C030 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31B8E7951E8219480060C030 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31B8E7961E8219480060C030 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A20FCFB21E81B6EB00557A5C = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +99,7 @@
 				A20FCFD41E81B6EC00557A5C /* D&D-MasterTests */,
 				A20FCFDF1E81B6EC00557A5C /* D&D-MasterUITests */,
 				A20FCFBC1E81B6EC00557A5C /* Products */,
+				31B8E7951E8219480060C030 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +116,16 @@
 		A20FCFBD1E81B6EC00557A5C /* D&D-Master */ = {
 			isa = PBXGroup;
 			children = (
+				31B8E7A41E821B270060C030 /* Info.plist */,
 				A20FCFBE1E81B6EC00557A5C /* AppDelegate.swift */,
-				A20FCFC01E81B6EC00557A5C /* FirstViewController.swift */,
-				A20FCFC21E81B6EC00557A5C /* SecondViewController.swift */,
+				31C9641B1E8200B00072F37F /* MainViewController.swift */,
 				A20FCFC41E81B6EC00557A5C /* Main.storyboard */,
+				A237A4081E832087004D4E22 /* PickerController.swift */,
 				A20FCFC71E81B6EC00557A5C /* Assets.xcassets */,
 				A20FCFC91E81B6EC00557A5C /* LaunchScreen.storyboard */,
 				A20FCFCC1E81B6EC00557A5C /* Info.plist */,
+				31B8E7981E821B260060C030 /* D&D-Master-Bridging-Header.h */,
+				A2367DF01E82F9B9008BFC43 /* puente.m */,
 			);
 			path = "D&D-Master";
 			sourceTree = "<group>";
@@ -191,11 +211,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Ángel Escobar Márquez";
 				TargetAttributes = {
 					A20FCFBA1E81B6EB00557A5C = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 3NAJ9M447E;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 					A20FCFD01E81B6EC00557A5C = {
@@ -235,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31B8E7AA1E821B270060C030 /* Info.plist in Resources */,
 				A20FCFCB1E81B6EC00557A5C /* LaunchScreen.storyboard in Resources */,
 				A20FCFC81E81B6EC00557A5C /* Assets.xcassets in Resources */,
 				A20FCFC61E81B6EC00557A5C /* Main.storyboard in Resources */,
@@ -262,9 +285,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A20FCFC31E81B6EC00557A5C /* SecondViewController.swift in Sources */,
 				A20FCFBF1E81B6EC00557A5C /* AppDelegate.swift in Sources */,
-				A20FCFC11E81B6EC00557A5C /* FirstViewController.swift in Sources */,
+				A2367DF11E82F9B9008BFC43 /* puente.m in Sources */,
+				31C9641C1E8200B00072F37F /* MainViewController.swift in Sources */,
+				A237A4091E832087004D4E22 /* PickerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +361,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -387,6 +412,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -416,10 +442,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 3NAJ9M447E;
 				INFOPLIST_FILE = "D&D-Master/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aem.D-D-Master";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "D&D-Master/D&D-Master-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -428,10 +459,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 3NAJ9M447E;
 				INFOPLIST_FILE = "D&D-Master/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aem.D-D-Master";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "D&D-Master/D&D-Master-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -509,6 +544,7 @@
 				A20FCFE71E81B6EC00557A5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A20FCFE81E81B6EC00557A5C /* Build configuration list for PBXNativeTarget "D&D-MasterTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +553,7 @@
 				A20FCFEA1E81B6EC00557A5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A20FCFEB1E81B6EC00557A5C /* Build configuration list for PBXNativeTarget "D&D-MasterUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +562,7 @@
 				A20FCFED1E81B6EC00557A5C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
