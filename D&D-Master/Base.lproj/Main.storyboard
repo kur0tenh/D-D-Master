@@ -135,9 +135,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="uHZ-wf-4jy" kind="popoverPresentation" popoverAnchorView="U0e-2c-qTE" id="acK-ug-M3I">
-                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                            </segue>
+                                            <segue destination="uHZ-wf-4jy" kind="presentation" id="sgu-ql-PNg"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="JFu-Hf-1op" detailTextLabel="KA2-Ry-He1" style="IBUITableViewCellStyleValue1" id="I5d-dv-4AI">

@@ -85,9 +85,21 @@ class MainViewController: UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         abrirBaseDatos()
-        crearTabla()
-        insertarDatos()
+        
+        if(UserDefaults.standard.bool(forKey: "HasLaunchedOnce"))
+        {
+            // app already launched
+        }
+        else
+        {
+            crearTabla()
+            insertarDatos()
+            UserDefaults.standard.set(true, forKey: "HasLaunchedOnce")
+            UserDefaults.standard.synchronize()
+        }
+        
         consultarClases()
             print("yolo")
         }
