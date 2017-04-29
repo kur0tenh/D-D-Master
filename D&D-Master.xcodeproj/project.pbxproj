@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		31B8E7971E8219480060C030 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 31B8E7961E8219480060C030 /* libsqlite3.tbd */; };
-		31B8E7AA1E821B270060C030 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 31B8E7A41E821B270060C030 /* Info.plist */; };
 		31C9641C1E8200B00072F37F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9641B1E8200B00072F37F /* MainViewController.swift */; };
 		A20FCFBF1E81B6EC00557A5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20FCFBE1E81B6EC00557A5C /* AppDelegate.swift */; };
 		A20FCFC61E81B6EC00557A5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A20FCFC41E81B6EC00557A5C /* Main.storyboard */; };
@@ -40,7 +39,6 @@
 /* Begin PBXFileReference section */
 		31B8E7961E8219480060C030 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		31B8E7981E821B260060C030 /* D&D-Master-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "D&D-Master-Bridging-Header.h"; sourceTree = "<group>"; };
-		31B8E7A41E821B270060C030 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = fmdb/src/fmdb/Info.plist; sourceTree = "<group>"; };
 		31C9641B1E8200B00072F37F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A20FCFBB1E81B6EC00557A5C /* D&D-Master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "D&D-Master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A20FCFBE1E81B6EC00557A5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,7 +114,6 @@
 		A20FCFBD1E81B6EC00557A5C /* D&D-Master */ = {
 			isa = PBXGroup;
 			children = (
-				31B8E7A41E821B270060C030 /* Info.plist */,
 				A20FCFBE1E81B6EC00557A5C /* AppDelegate.swift */,
 				31C9641B1E8200B00072F37F /* MainViewController.swift */,
 				A20FCFC41E81B6EC00557A5C /* Main.storyboard */,
@@ -257,7 +254,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31B8E7AA1E821B270060C030 /* Info.plist in Resources */,
 				A20FCFCB1E81B6EC00557A5C /* LaunchScreen.storyboard in Resources */,
 				A20FCFC81E81B6EC00557A5C /* Assets.xcassets in Resources */,
 				A20FCFC61E81B6EC00557A5C /* Main.storyboard in Resources */,
