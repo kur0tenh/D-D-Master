@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -250,6 +250,11 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="uHZ-wf-4jy" kind="popoverPresentation" popoverAnchorView="Qrj-Ml-cvX" id="6qo-5s-gmt">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="dsR-cm-Rba" detailTextLabel="M1Y-zN-45o" style="IBUITableViewCellStyleValue1" id="MGh-yI-ggO">
                                         <rect key="frame" x="0.0" y="264" width="375" height="44"/>
@@ -274,6 +279,11 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="uHZ-wf-4jy" kind="popoverPresentation" popoverAnchorView="MGh-yI-ggO" id="cHv-9i-KMf">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="ud6-Ig-ALE" detailTextLabel="Odk-yI-ban" style="IBUITableViewCellStyleValue1" id="jip-rh-jUy">
                                         <rect key="frame" x="0.0" y="308" width="375" height="44"/>
@@ -298,6 +308,11 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="uHZ-wf-4jy" kind="popoverPresentation" popoverAnchorView="jip-rh-jUy" id="qtY-NR-qug">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="awH-Ub-rH1" detailTextLabel="5Bw-wT-WXT" style="IBUITableViewCellStyleValue1" id="FoU-JF-oO7">
                                         <rect key="frame" x="0.0" y="352" width="375" height="44"/>
@@ -322,6 +337,11 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="uHZ-wf-4jy" kind="popoverPresentation" popoverAnchorView="FoU-JF-oO7" id="1cQ-1Q-WIT">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Crl-EP-yhC" detailTextLabel="j6M-Ew-lcX" style="IBUITableViewCellStyleValue1" id="X6y-sS-9Lg">
                                         <rect key="frame" x="0.0" y="396" width="375" height="44"/>
@@ -346,6 +366,11 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="uHZ-wf-4jy" kind="popoverPresentation" popoverAnchorView="X6y-sS-9Lg" id="EWO-ae-cTS">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Rdu-18-Yvt" detailTextLabel="RLw-f2-F9e" style="IBUITableViewCellStyleValue1" id="wFU-6l-2FO">
                                         <rect key="frame" x="0.0" y="440" width="375" height="44"/>
@@ -370,6 +395,11 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="uHZ-wf-4jy" kind="popoverPresentation" popoverAnchorView="wFU-6l-2FO" id="SYx-TO-8pZ">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="wpM-os-hXV" detailTextLabel="fob-w9-hqQ" style="IBUITableViewCellStyleValue1" id="h2a-R2-VY8">
                                         <rect key="frame" x="0.0" y="484" width="375" height="44"/>
@@ -426,9 +456,9 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kVt-Ox-cdA">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kVt-Ox-cdA">
                                                     <rect key="frame" x="139" y="6" width="228" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -587,9 +617,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="546-4u-dbD" userLabel="Male, Female, Other">
-                                                    <rect key="frame" x="127" y="7" width="121" height="29"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="right" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="546-4u-dbD" userLabel="Male, Female, Other">
+                                                    <rect key="frame" x="103" y="7" width="264" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
                                                     <segments>
                                                         <segment title="Male"/>
                                                         <segment title="Female"/>
@@ -677,7 +707,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tLo-8b-J5I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3628" y="-407"/>
+            <point key="canvasLocation" x="3502" y="-246"/>
         </scene>
         <!--Picker Controller-->
         <scene sceneID="ANq-Y7-eqq">
@@ -908,7 +938,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="del-xo-6dS" id="bjT-Nn-V9P">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>

@@ -15,6 +15,14 @@ struct arrClases {
     static var Clase = ""
     static var Subclase = ""
     static var Background = ""
+    static var strength = 0
+    static var dexterity = 0
+    static var constitution = 0
+    static var intelligence = 0
+    static var wisdom = 0
+    static var charisma = 0
+    
+    
 }
 class MainViewController: UITableViewController{
     
@@ -75,6 +83,30 @@ class MainViewController: UITableViewController{
         if indexPath.row == 1{
             consultarRazas()
             arrClases.selected = 1
+        }
+        if indexPath.row == 5{
+            statsMaximos()
+            arrClases.selected = 5
+        }
+        if indexPath.row == 6{
+            statsMaximos()
+            arrClases.selected = 6
+        }
+        if indexPath.row == 7{
+            statsMaximos()
+            arrClases.selected = 7
+        }
+        if indexPath.row == 8{
+            statsMaximos()
+            arrClases.selected = 8
+        }
+        if indexPath.row == 9{
+            statsMaximos()
+            arrClases.selected = 9
+        }
+        if indexPath.row == 10{
+            statsMaximos()
+            arrClases.selected = 10
         }
     }
     
@@ -160,7 +192,7 @@ class MainViewController: UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        abrirBaseDatos()
+        _ = abrirBaseDatos()
         
         if(UserDefaults.standard.bool(forKey: "HasLaunchedOnce"))
         {
@@ -168,7 +200,7 @@ class MainViewController: UITableViewController{
         }
         else
         {
-            crearTabla()
+            _ = crearTabla()
             insertarDatos()
             UserDefaults.standard.set(true, forKey: "HasLaunchedOnce")
             UserDefaults.standard.synchronize()
@@ -177,5 +209,21 @@ class MainViewController: UITableViewController{
         consultarClases()
             print("yolo")
         }
-
+    
+    func statsMaximos(){
+        let statsMaximos = 10
+        let stats = arrClases.strength + arrClases.dexterity + arrClases.charisma + arrClases.wisdom + arrClases.intelligence + arrClases.constitution
+        var nombres = [String]()
+        var i = 0
+        nombres.append("\(i)")
+        nombres.append("\(i)")
+        while  statsMaximos > stats+i {
+            i = i+1
+            nombres.append("\(i)")
+        }
+        arrClases.lolClases = nombres
+    }
+    func tomarVariables(){
+    
+    }
 }

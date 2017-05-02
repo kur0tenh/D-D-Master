@@ -29,6 +29,24 @@ class PickerController: UIViewController, UIPickerViewDataSource, UIPickerViewDe
         if arrClases.selected == 4{
             arrClases.Background = arrAtributes[celda]
         }
+        if arrClases.selected == 5{
+            arrClases.strength = Int(arrAtributes[celda])!
+        }
+        if arrClases.selected == 6{
+            arrClases.dexterity = Int(arrAtributes[celda])!
+        }
+        if arrClases.selected == 7{
+            arrClases.constitution = Int(arrAtributes[celda])!
+        }
+        if arrClases.selected == 8{
+            arrClases.intelligence = Int(arrAtributes[celda])!
+        }
+        if arrClases.selected == 9{
+            arrClases.wisdom = Int(arrAtributes[celda])!
+        }
+        if arrClases.selected == 10{
+            arrClases.charisma = Int(arrAtributes[celda])!
+        }
         
         self.dismiss(animated: true, completion: nil)
     }
