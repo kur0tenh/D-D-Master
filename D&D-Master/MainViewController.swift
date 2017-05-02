@@ -21,11 +21,27 @@ struct arrClases {
     static var intelligence = 0
     static var wisdom = 0
     static var charisma = 0
-    
-    
+    static var nivel = 1
+    static var skill1 = ""
+    static var skill2 = ""
+    static var skill3 = ""
+    static var skill4 = ""
+    static var skillMight = true
+
 }
 class MainViewController: UITableViewController{
     
+    
+    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var campaign: UITextField!
+    @IBOutlet weak var experence: UITextField!
+    @IBOutlet weak var sex: UISegmentedControl!
+    @IBOutlet weak var flaw: UILabel!
+    @IBOutlet weak var ideal: UITextField!
+    @IBOutlet weak var traittwo: UITextField!
+    @IBOutlet weak var traitone: UITextField!
+    @IBOutlet weak var feature: UITextField!
+    @IBOutlet weak var region: UITextField!
     var baseDatos: OpaquePointer? = nil
     func obtenerPath(_	salida:	String)	->	URL?	{
         if let path =	FileManager.default.urls(for:	.documentDirectory,	in:	.userDomainMask).first {
@@ -46,7 +62,7 @@ class MainViewController: UITableViewController{
         return false
     }
     func crearTabla() -> Bool {
-        let sqlCreaTabla = "create table clases(nombre varchar(20),hitdice integer,diceroll integer,skillnumber integer, proficiencias varchar(100), equipo varchar(100), savingthrows varchar(100)); create table razas(nombre varchar(20), str integer, dex integer, cons integer, intell integer, wis integer , charisma integer,lenguajes varchar(100),vision varchar(20),tamano varchar(20),speed integer,proficiencias varchar(100)); create table subclases(nombre varchar(20),sobreclase varchar(20)); create table background(nombre varchar(20),skills varchar(100),lenguajes varchar(100), equipo varchar(100), dinero varchar(100)); create table personaje(numero integer, nombre varchar(20), raza varchar(20), clase varchar(20), subclase varchar(20), background varchar(100), str integer, dex integer, cons integer, intell integer, wis integer, charisma integer, nivel integer, experiencia integer, siguiente integer, campaña varchar(20), region varchar(20), tamaño varchar(20), feature varchar(20), pt1 varchar(20), pt2 varchar(20), ideal varchar (20), flaw varchar (20), gender varchar(20), skills varchar(200), lenguajes varchar(100), dinero varchar(100));"
+        let sqlCreaTabla = "create table clases(nombre varchar(20),hitdice integer,diceroll integer,skillnumber integer, proficiencias varchar(1000), equipo varchar(1000), savingthrows varchar(1000)); create table razas(nombre varchar(20), str integer, dex integer, cons integer, intell integer, wis integer , charisma integer,lenguajes varchar(1000),vision varchar(20),tamano varchar(20),speed integer,proficiencias varchar(1000)); create table subclases(nombre varchar(20),sobreclase varchar(20)); create table background(nombre varchar(20),skills varchar(1000),lenguajes varchar(1000), equipo varchar(1000), dinero varchar(1000)); create table monstruos(nombre varchar(20),descripcion varchar(1000),imagen varchar(1000)); create table hechizos(nombre varchar(20),descripcion varchar(1000),imagen varchar(1000)); create table personaje(nombre varchar(20), str integer, dex integer, cons integer, intell integer, wis integer , charisma integer, lenguajes varchar(1000), vision varchar(1000), tamano varchar(1000), speed integer, proficiencias varchar(1000), hitdice integer, diceroll integer, skillnumber integer, equipo varchar(1000), savingthrows varchar(10000), clase varchar(20), subclase varchar(20), raza varchar(20), background varchar(20), nivel varchar(20), skills varchar(1000), exp integer, region varchar(1000), feature varchar(1000), trait1 varchar(1000), trait2 varchar(1000), ideal varchar(1000), flaw varchar(1000), sexo varchar(20));"
         var error: UnsafeMutablePointer<Int8>? = nil
         if sqlite3_exec(baseDatos, sqlCreaTabla, nil, nil, &error) == SQLITE_OK {
             return true
@@ -107,6 +123,26 @@ class MainViewController: UITableViewController{
         if indexPath.row == 10{
             statsMaximos()
             arrClases.selected = 10
+        }
+        if indexPath.row == 11{
+            niveles()
+            arrClases.selected = 11
+        }
+        if indexPath.row == 12{
+            skills(number: 1)
+            arrClases.selected = 12
+        }
+        if indexPath.row == 13{
+            skills(number: 2)
+            arrClases.selected = 13
+        }
+        if indexPath.row == 14{
+            skills(number:3)
+            arrClases.selected = 14
+        }
+        if indexPath.row == 15{
+            skills(number: 4)
+            arrClases.selected = 15
         }
     }
     
@@ -211,19 +247,188 @@ class MainViewController: UITableViewController{
         }
     
     func statsMaximos(){
-        let statsMaximos = 10
-        let stats = arrClases.strength + arrClases.dexterity + arrClases.charisma + arrClases.wisdom + arrClases.intelligence + arrClases.constitution
+        var nombres = [String]()
+        nombres.append("\(0)")
+        if !((arrClases.strength == 15) || (arrClases.dexterity == 15) || (arrClases.charisma == 15) || (arrClases.wisdom == 15) || (arrClases.intelligence == 15) || (arrClases.constitution == 15)){
+            nombres.append("15")
+        }
+        if !((arrClases.strength == 14) || (arrClases.dexterity == 14) || (arrClases.charisma == 14) || (arrClases.wisdom == 15) || (arrClases.intelligence == 14) || (arrClases.constitution == 14)){
+            nombres.append("14")
+        }
+        if !((arrClases.strength == 13) || (arrClases.dexterity == 13) || (arrClases.charisma == 13) || (arrClases.wisdom == 13) || (arrClases.intelligence == 13) || (arrClases.constitution == 13)){
+            nombres.append("13")
+        }
+        if !((arrClases.strength == 12) || (arrClases.dexterity == 12) || (arrClases.charisma == 12) || (arrClases.wisdom == 12) || (arrClases.intelligence == 12) || (arrClases.constitution == 12)){
+            nombres.append("12")
+        }
+        if !((arrClases.strength == 10) || (arrClases.dexterity == 10) || (arrClases.charisma == 10) || (arrClases.wisdom == 15) || (arrClases.intelligence == 10) || (arrClases.constitution == 10)){
+            nombres.append("10")
+        }
+        if !((arrClases.strength == 8) || (arrClases.dexterity == 8) || (arrClases.charisma == 8) || (arrClases.wisdom == 8) || (arrClases.intelligence == 8) || (arrClases.constitution == 8)){
+            nombres.append("8")
+        }
+        nombres.append("\(0)")
+        arrClases.lolClases = nombres
+    }
+    
+    func sumarVariables(){
+        arrClases.strength = arrClases.strength + addstat(stat: "str")
+        arrClases.dexterity = arrClases.dexterity + addstat(stat: "dex")
+        arrClases.constitution = arrClases.constitution + addstat(stat: "cons")
+        arrClases.intelligence = arrClases.intelligence + addstat(stat: "intell")
+        arrClases.wisdom = arrClases.wisdom + addstat(stat: "wis")
+        arrClases.charisma = arrClases.charisma + addstat(stat: "charisma")
+    }
+    func niveles(){
         var nombres = [String]()
         var i = 0
-        nombres.append("\(i)")
-        nombres.append("\(i)")
-        while  statsMaximos > stats+i {
-            i = i+1
+        while i < 20{
+            i = i + 1
             nombres.append("\(i)")
         }
         arrClases.lolClases = nombres
     }
-    func tomarVariables(){
+    
+    func addstat(stat: String) -> Int
+    {
+        var st = "0"
+        let sqlConsulta = "SELECT \(stat) FROM razas WHERE nombre = '\(arrClases.Raza)'"
+        print (sqlConsulta)
+        var declaracion: OpaquePointer? = nil
+        if sqlite3_prepare_v2(baseDatos, sqlConsulta, -1, &declaracion, nil) == SQLITE_OK
+        {
+            while sqlite3_step(declaracion) == SQLITE_ROW
+            {
+                st = String.init(cString: sqlite3_column_text(declaracion, 0))
+                print(st)
+            }
+        }
+        return Int(st)!
+    }
+    
+    func skills(number: Int){
+        var st = 0
+        var nombres = [String]()
+        let sqlConsulta = "SELECT * FROM clases WHERE nombre = '\(arrClases.Clase)'"
+        print (sqlConsulta)
+        var declaracion: OpaquePointer? = nil
+        if sqlite3_prepare_v2(baseDatos, sqlConsulta, -1, &declaracion, nil) == SQLITE_OK
+        {
+            while sqlite3_step(declaracion) == SQLITE_ROW
+            {
+                st = Int(String.init(cString: sqlite3_column_text(declaracion, 3)))!
+                
+            }
+        }
+        if number <= st{
+            nombres.append("Acrobatics")
+            nombres.append("Sleight of hand")
+            nombres.append("Stealth")
+            nombres.append("Arcana")
+            nombres.append("History")
+            nombres.append("Investigation")
+            nombres.append("Nature")
+            nombres.append("Religion")
+            nombres.append("Animal Handling")
+            nombres.append("Insight")
+            nombres.append("Medicine")
+            nombres.append("Perception")
+            nombres.append("Survival")
+            nombres.append("Deception")
+            nombres.append("Intimidation")
+            nombres.append("Performance")
+            nombres.append("Persuacion")
+            arrClases.skillMight = true
+        }else
+        {
+            nombres.append(" ")
+            nombres.append("\(arrClases.Clase) class only have \(st) skill ponts")
+            arrClases.skillMight = false
+        }
+        arrClases.lolClases = nombres
+    }
+    @IBAction func crearPersona(_ sender: Any)
+    {
+        sumarVariables()
+        let nombre = name.text!
+        let str = arrClases.strength
+        let dex =  arrClases.dexterity
+        let cons = arrClases.constitution
+        let intell = arrClases.intelligence
+        let wis = arrClases.wisdom
+        let charisma = arrClases.charisma
+        var lenguajes = ""
+        var vision = ""
+        var tamano = ""
+        var speed = ""
+        var proficiencias = ""
+        var hitdice = "0"
+        var diceroll = "0"
+        var skillnumber = "0"
+        var equipo = ""
+        var savingtrhows = ""
+        let clase = arrClases.Clase
+        let subclase = arrClases.subclases
+        let raza = arrClases.Raza
+        let background = arrClases.Background
+        let nivel = arrClases.nivel
+        var skills = ("\(arrClases.skill1)-\(arrClases.skill2)-\(arrClases.skill3)-\(arrClases.skill4)")
+        let exp = experence.text!
+        let reg = region.text!
+        let feat = feature.text!
+        let trait1 = traitone.text!
+        let trait2 = traittwo.text!
+        let idea = ideal.text!
+        let fla = flaw.text!
+        let sexo = sex.titleForSegment(at: sex.selectedSegmentIndex)!
+        let sqlConsulta = "SELECT * FROM razas Where nombre = '\(arrClases.Raza)'"
+        var declaracion: OpaquePointer? = nil
+        if sqlite3_prepare_v2(baseDatos, sqlConsulta, -1, &declaracion, nil) == SQLITE_OK
+        {
+            while sqlite3_step(declaracion) == SQLITE_ROW
+            {
+                lenguajes = lenguajes+"-"+String.init(cString: sqlite3_column_text(declaracion, 7))
+                vision = String.init(cString: sqlite3_column_text(declaracion, 8))
+                tamano = String.init(cString: sqlite3_column_text(declaracion, 9))
+                speed = String.init(cString: sqlite3_column_text(declaracion, 10))
+                proficiencias = proficiencias+"-"+String.init(cString: sqlite3_column_text(declaracion, 11))
+            }
+        }
+        let sqlConsulta2 = "SELECT * FROM clases Where nombre = '\(arrClases.Clase)'"
+        var declaracion2: OpaquePointer? = nil
+        if sqlite3_prepare_v2(baseDatos, sqlConsulta2, -1, &declaracion2, nil) == SQLITE_OK
+        {
+            while sqlite3_step(declaracion2) == SQLITE_ROW
+            {
+                hitdice = String.init(cString: sqlite3_column_text(declaracion2, 1))
+                diceroll = String.init(cString: sqlite3_column_text(declaracion2, 2))
+                skillnumber = String.init(cString: sqlite3_column_text(declaracion2, 3))
+                proficiencias = proficiencias+"-"+String.init(cString: sqlite3_column_text(declaracion2, 4))
+                equipo = equipo+"-"+String.init(cString: sqlite3_column_text(declaracion2, 5))
+                savingtrhows = String.init(cString: sqlite3_column_text(declaracion2, 6))
+
+            }
+        }
+        let sqlConsulta3 = "SELECT * FROM background Where nombre = '\(arrClases.Background)'"
+        var declaracion3: OpaquePointer? = nil
+        if sqlite3_prepare_v2(baseDatos, sqlConsulta3, -1, &declaracion3, nil) == SQLITE_OK
+        {
+            while sqlite3_step(declaracion3) == SQLITE_ROW
+            {
+                skills = skills+"-"+String.init(cString: sqlite3_column_text(declaracion3, 1))
+                lenguajes = lenguajes+"-"+String.init(cString: sqlite3_column_text(declaracion3, 2))
+                equipo = equipo+"-"+String.init(cString: sqlite3_column_text(declaracion3, 3))
+                equipo = equipo+"-"+String.init(cString: sqlite3_column_text(declaracion3, 4))
+                
+            }
+        }
+        let sqlInserta = "INSERT INTO personaje (nombre, str, dex,cons,intell,wis,charisma,lenguajes,vision,tamano,speed,proficiencias,hitdice,diceroll,skillnumber,equipo,savingthrows,clase,subclase,raza,background,nivel,skills,exp,region,feature,trait1,trait2,ideal,flaw,sexo) VALUES ('\(nombre)',\(str),\(dex),\(cons),\(intell),\(wis),\(charisma),'\(lenguajes)','\(vision)','\(tamano)','\(speed)','\(proficiencias)',\(hitdice),\(diceroll),\(skillnumber),'\(equipo)','\(savingtrhows)','\(clase)','\(subclase)','\(raza)','\(background)','\(nivel)','\(skills)',\(exp),'\(reg)','\(feat)','\(trait1)','\(trait2)','\(idea)','\(fla)','\(sexo)');"
+        var error: UnsafeMutablePointer<Int8>? = nil
+        if sqlite3_exec(baseDatos, sqlInserta, nil, nil, &error) != SQLITE_OK {
+            print("Error al insertar datos)")
+        }else{
+            print("todo bien")
+        }
     
     }
 }
