@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="ipad12_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -807,9 +807,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLz-g6-cPB">
-                                                    <rect key="frame" x="-542.5" y="5" width="2109" height="30"/>
+                                                    <rect key="frame" x="-542" y="0.0" width="2109" height="43"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="2109" id="gSv-SO-Oa8"/>
+                                                        <constraint firstAttribute="width" constant="2109" id="bws-mB-qCI"/>
                                                     </constraints>
                                                     <state key="normal" title="Create"/>
                                                     <connections>
@@ -819,8 +819,9 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="hLz-g6-cPB" firstAttribute="bottom" secondItem="N3K-dr-qJC" secondAttribute="bottomMargin" id="dCL-eW-T2P"/>
-                                                <constraint firstItem="hLz-g6-cPB" firstAttribute="centerX" secondItem="N3K-dr-qJC" secondAttribute="centerX" id="eIp-Mm-EZa"/>
+                                                <constraint firstAttribute="bottom" secondItem="hLz-g6-cPB" secondAttribute="bottom" id="aBr-IJ-Fvx"/>
+                                                <constraint firstItem="hLz-g6-cPB" firstAttribute="centerX" secondItem="N3K-dr-qJC" secondAttribute="centerX" id="e0Z-gX-KRG"/>
+                                                <constraint firstItem="hLz-g6-cPB" firstAttribute="top" secondItem="N3K-dr-qJC" secondAttribute="top" id="vTc-aa-epx"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -832,9 +833,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKf-Rf-ncL">
-                                                    <rect key="frame" x="-498" y="0.0" width="2020" height="30"/>
+                                                    <rect key="frame" x="-498" y="0.0" width="2020" height="43"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="2020" id="JAh-d0-5OV"/>
+                                                        <constraint firstAttribute="width" constant="2020" id="d0k-Sn-FFN"/>
                                                     </constraints>
                                                     <state key="normal" title="Cancel"/>
                                                     <connections>
@@ -843,8 +844,9 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="nKf-Rf-ncL" firstAttribute="top" secondItem="G2u-Qk-qfU" secondAttribute="top" id="4lp-Jd-q9C"/>
-                                                <constraint firstItem="nKf-Rf-ncL" firstAttribute="centerX" secondItem="G2u-Qk-qfU" secondAttribute="centerX" id="yEE-B9-xqU"/>
+                                                <constraint firstItem="nKf-Rf-ncL" firstAttribute="top" secondItem="G2u-Qk-qfU" secondAttribute="top" id="Hkl-CO-noJ"/>
+                                                <constraint firstItem="nKf-Rf-ncL" firstAttribute="centerX" secondItem="G2u-Qk-qfU" secondAttribute="centerX" id="LKb-Q9-eYy"/>
+                                                <constraint firstAttribute="bottom" secondItem="nKf-Rf-ncL" secondAttribute="bottom" id="x5h-G6-IAT"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -857,7 +859,6 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="SelectionClass" destination="KA2-Ry-He1" id="md8-lC-3SC"/>
                         <outlet property="campaign" destination="kVt-Ox-cdA" id="9dv-l1-RW5"/>
                         <outlet property="experence" destination="ikP-HJ-Opj" id="Iw0-HJ-Bn7"/>
                         <outlet property="feature" destination="Mh2-WG-5Ug" id="niP-Pc-GwT"/>
@@ -872,7 +873,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YmL-ax-Ku0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3753.75" y="-874.64788732394368"/>
+            <point key="canvasLocation" x="3481" y="-979"/>
         </scene>
         <!--See Character-->
         <scene sceneID="jc8-oG-tgH">
@@ -1090,14 +1091,14 @@
                         <viewControllerLayoutGuide type="bottom" id="muw-Wg-00h"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rRY-Jd-LHD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="83Y-pv-heH" userLabel="pvPaises">
-                                <rect key="frame" x="0.0" y="28" width="375" height="216"/>
+                                <rect key="frame" x="0.0" y="28" width="1024" height="216"/>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAP-FJ-DfM">
-                                <rect key="frame" x="0.0" y="252" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="252" width="1024" height="30"/>
                                 <state key="normal" title="Accept"/>
                                 <connections>
                                     <action selector="Accept:" destination="uHZ-wf-4jy" eventType="touchUpInside" id="iMZ-D0-MJy"/>
@@ -1121,7 +1122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KgY-5E-Y2y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5213.4375" y="-872.00704225352115"/>
+            <point key="canvasLocation" x="4359" y="-979"/>
         </scene>
         <!--Characters-->
         <scene sceneID="yOj-gi-a1o">
@@ -1157,12 +1158,12 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="25" y="0.0"/>
+            <point key="canvasLocation" x="25" y="-12"/>
         </scene>
         <!--Characters-->
         <scene sceneID="EVJ-Zj-m9n">
             <objects>
-                <tableViewController title="Characters" id="ssb-Pl-Hrn" customClass="MonsterViewController" customModule="D_D_Master" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Characters" modalTransitionStyle="crossDissolve" id="ssb-Pl-Hrn" customClass="MonsterViewController" customModule="D_D_Master" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fNs-fU-ET7">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1412,7 +1413,7 @@
         <image name="spellBook" width="250" height="333"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tSp-Ws-5FY"/>
+        <segue reference="cHv-9i-KMf"/>
         <segue reference="N1M-Lo-PjX"/>
     </inferredMetricsTieBreakers>
 </document>

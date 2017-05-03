@@ -16,9 +16,13 @@ class PickerController: UIViewController, UIPickerViewDataSource, UIPickerViewDe
         
     }
     @IBAction func Accept(_ sender: Any) {
+        
+        
         print(arrClases.selected)
+        arrClases.celda?.detailTextLabel?.text = arrAtributes[celda]
         if arrClases.selected == 1{
             arrClases.Raza = arrAtributes[celda]
+
         }
         if arrClases.selected == 2{
             arrClases.Clase = arrAtributes[celda]
@@ -71,6 +75,7 @@ class PickerController: UIViewController, UIPickerViewDataSource, UIPickerViewDe
         }
         
         self.dismiss(animated: true, completion: nil)
+
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
