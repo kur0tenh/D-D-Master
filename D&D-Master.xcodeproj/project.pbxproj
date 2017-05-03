@@ -106,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				A20FCFBD1E81B6EC00557A5C /* D&D-Master */,
-				A20FCFD41E81B6EC00557A5C /* D&D-MasterTests */,
 				A20FCFDF1E81B6EC00557A5C /* D&D-MasterUITests */,
 				A20FCFBC1E81B6EC00557A5C /* Products */,
 				31B8E7951E8219480060C030 /* Frameworks */,
@@ -141,6 +140,7 @@
 				A2367DF01E82F9B9008BFC43 /* puente.m */,
 				312806A91EB953F3003BBFC7 /* character.swift */,
 				312806AB1EB965BD003BBFC7 /* seeCharacter.swift */,
+				A20FCFD41E81B6EC00557A5C /* D&D-MasterTests */,
 			);
 			path = "D&D-Master";
 			sourceTree = "<group>";
@@ -152,7 +152,7 @@
 				A20FCFD71E81B6EC00557A5C /* Info.plist */,
 			);
 			path = "D&D-MasterTests";
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		A20FCFDF1E81B6EC00557A5C /* D&D-MasterUITests */ = {
 			isa = PBXGroup;
