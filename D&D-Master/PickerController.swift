@@ -24,7 +24,10 @@ class PickerController: UIViewController, UIPickerViewDataSource, UIPickerViewDe
             arrClases.Clase = arrAtributes[celda]
         }
         if arrClases.selected == 3{
-            arrClases.Subclase = arrAtributes[celda]
+            if arrClases.subclassMight
+            {
+                arrClases.Subclase = arrAtributes[celda]
+            }
         }
         if arrClases.selected == 4{
             arrClases.Background = arrAtributes[celda]

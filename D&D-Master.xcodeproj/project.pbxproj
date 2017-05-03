@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		312806AA1EB953F3003BBFC7 /* character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312806A91EB953F3003BBFC7 /* character.swift */; };
+		312806AC1EB965BD003BBFC7 /* seeCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312806AB1EB965BD003BBFC7 /* seeCharacter.swift */; };
+		312806AE1EB96FE1003BBFC7 /* MonsterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312806AD1EB96FE1003BBFC7 /* MonsterViewController.swift */; };
+		312806B01EB9739A003BBFC7 /* seeMonster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312806AF1EB9739A003BBFC7 /* seeMonster.swift */; };
+		312806B21EB97861003BBFC7 /* SpellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312806B11EB97861003BBFC7 /* SpellViewController.swift */; };
+		312806B41EB9797F003BBFC7 /* SeeSpells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312806B31EB9797F003BBFC7 /* SeeSpells.swift */; };
 		31B8E7971E8219480060C030 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 31B8E7961E8219480060C030 /* libsqlite3.tbd */; };
 		31C9641C1E8200B00072F37F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9641B1E8200B00072F37F /* MainViewController.swift */; };
 		A20FCFBF1E81B6EC00557A5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20FCFBE1E81B6EC00557A5C /* AppDelegate.swift */; };
@@ -37,6 +43,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		312806A91EB953F3003BBFC7 /* character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = character.swift; sourceTree = "<group>"; };
+		312806AB1EB965BD003BBFC7 /* seeCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = seeCharacter.swift; sourceTree = "<group>"; };
+		312806AD1EB96FE1003BBFC7 /* MonsterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterViewController.swift; sourceTree = "<group>"; };
+		312806AF1EB9739A003BBFC7 /* seeMonster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = seeMonster.swift; sourceTree = "<group>"; };
+		312806B11EB97861003BBFC7 /* SpellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpellViewController.swift; sourceTree = "<group>"; };
+		312806B31EB9797F003BBFC7 /* SeeSpells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeeSpells.swift; sourceTree = "<group>"; };
 		31B8E7961E8219480060C030 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		31B8E7981E821B260060C030 /* D&D-Master-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "D&D-Master-Bridging-Header.h"; sourceTree = "<group>"; };
 		31C9641B1E8200B00072F37F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -117,12 +129,18 @@
 				A20FCFBE1E81B6EC00557A5C /* AppDelegate.swift */,
 				31C9641B1E8200B00072F37F /* MainViewController.swift */,
 				A20FCFC41E81B6EC00557A5C /* Main.storyboard */,
+				312806B31EB9797F003BBFC7 /* SeeSpells.swift */,
+				312806B11EB97861003BBFC7 /* SpellViewController.swift */,
+				312806AF1EB9739A003BBFC7 /* seeMonster.swift */,
+				312806AD1EB96FE1003BBFC7 /* MonsterViewController.swift */,
 				A237A4081E832087004D4E22 /* PickerController.swift */,
 				A20FCFC71E81B6EC00557A5C /* Assets.xcassets */,
 				A20FCFC91E81B6EC00557A5C /* LaunchScreen.storyboard */,
 				A20FCFCC1E81B6EC00557A5C /* Info.plist */,
 				31B8E7981E821B260060C030 /* D&D-Master-Bridging-Header.h */,
 				A2367DF01E82F9B9008BFC43 /* puente.m */,
+				312806A91EB953F3003BBFC7 /* character.swift */,
+				312806AB1EB965BD003BBFC7 /* seeCharacter.swift */,
 			);
 			path = "D&D-Master";
 			sourceTree = "<group>";
@@ -281,9 +299,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				312806B01EB9739A003BBFC7 /* seeMonster.swift in Sources */,
 				A20FCFBF1E81B6EC00557A5C /* AppDelegate.swift in Sources */,
 				A2367DF11E82F9B9008BFC43 /* puente.m in Sources */,
 				31C9641C1E8200B00072F37F /* MainViewController.swift in Sources */,
+				312806AE1EB96FE1003BBFC7 /* MonsterViewController.swift in Sources */,
+				312806AC1EB965BD003BBFC7 /* seeCharacter.swift in Sources */,
+				312806B41EB9797F003BBFC7 /* SeeSpells.swift in Sources */,
+				312806B21EB97861003BBFC7 /* SpellViewController.swift in Sources */,
+				312806AA1EB953F3003BBFC7 /* character.swift in Sources */,
 				A237A4091E832087004D4E22 /* PickerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
