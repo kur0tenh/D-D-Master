@@ -805,7 +805,7 @@
                                                     <state key="normal" title="Create"/>
                                                     <connections>
                                                         <action selector="crearPersona:" destination="An8-6r-IG5" eventType="touchUpInside" id="vik-90-mQH"/>
-                                                        <segue destination="rxV-bQ-T3R" kind="presentation" modalPresentationStyle="currentContext" id="aYD-2t-HI2"/>
+                                                        <segue destination="49e-Tb-3d3" kind="presentation" modalPresentationStyle="currentContext" modalTransitionStyle="coverVertical" id="Izk-er-3sJ"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -828,7 +828,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                                     <state key="normal" title="Cancel"/>
                                                     <connections>
-                                                        <segue destination="rxV-bQ-T3R" kind="presentation" modalPresentationStyle="currentContext" id="qP7-ew-iUZ"/>
+                                                        <segue destination="49e-Tb-3d3" kind="presentation" modalPresentationStyle="currentContext" modalTransitionStyle="crossDissolve" id="v7O-s2-Mxo"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -971,7 +971,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aCe-Wa-HA8">
-                                <rect key="frame" x="19" y="384" width="336" height="206"/>
+                                <rect key="frame" x="19" y="384" width="336" height="157"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1001,6 +1001,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndM-bZ-lGz">
+                                <rect key="frame" x="164" y="580" width="46" height="30"/>
+                                <state key="normal" title="Return"/>
+                                <connections>
+                                    <segue destination="49e-Tb-3d3" kind="presentation" modalPresentationStyle="currentContext" modalTransitionStyle="flipHorizontal" id="czW-bO-woR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1018,9 +1025,11 @@
                             <constraint firstItem="fEr-B1-C49" firstAttribute="top" secondItem="0t4-5S-PAR" secondAttribute="bottom" constant="19" id="ERi-IX-mVH"/>
                             <constraint firstItem="oRs-H7-EfQ" firstAttribute="leading" secondItem="5Xn-zV-a7C" secondAttribute="leadingMargin" constant="2" id="EdX-UF-z8K"/>
                             <constraint firstItem="Sal-ij-jAu" firstAttribute="top" secondItem="fEr-B1-C49" secondAttribute="bottom" constant="1" id="Egm-Se-eRs"/>
+                            <constraint firstItem="fpR-GA-C0O" firstAttribute="top" secondItem="ndM-bZ-lGz" secondAttribute="bottom" constant="8" symbolic="YES" id="F4E-WX-JWN"/>
                             <constraint firstItem="wtO-Ha-Th0" firstAttribute="top" secondItem="Azh-rU-Tef" secondAttribute="bottom" constant="39" id="G1n-OF-BSO"/>
                             <constraint firstItem="g2L-Qd-CCt" firstAttribute="top" secondItem="ffc-Md-YTK" secondAttribute="bottom" constant="8" symbolic="YES" id="G41-N8-hXz"/>
                             <constraint firstItem="OY5-UB-Odz" firstAttribute="trailing" secondItem="8z6-jU-qfD" secondAttribute="trailing" id="HvG-PT-ibE"/>
+                            <constraint firstItem="ndM-bZ-lGz" firstAttribute="centerX" secondItem="aCe-Wa-HA8" secondAttribute="centerX" id="ITs-lv-Pth"/>
                             <constraint firstItem="0t4-5S-PAR" firstAttribute="centerX" secondItem="UOF-zr-u9R" secondAttribute="centerX" id="KEZ-RW-qbp"/>
                             <constraint firstItem="oRs-H7-EfQ" firstAttribute="baseline" secondItem="wtO-Ha-Th0" secondAttribute="baseline" id="KJr-Sv-D3u"/>
                             <constraint firstItem="aCe-Wa-HA8" firstAttribute="top" secondItem="OY5-UB-Odz" secondAttribute="bottom" constant="8" symbolic="YES" id="M5q-XO-Mxb"/>
@@ -1082,7 +1091,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tLo-8b-J5I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3343" y="-646"/>
+            <point key="canvasLocation" x="3341.5999999999999" y="-646.32683658170924"/>
         </scene>
         <!--Picker Controller-->
         <scene sceneID="ANq-Y7-eqq">
@@ -1328,11 +1337,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWf-Z3-tT6">
-                                <rect key="frame" x="165" y="317.5" width="46" height="129.5"/>
+                                <rect key="frame" x="165" y="318" width="46" height="129"/>
                                 <state key="normal" title="Button"/>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PsI-rd-agF">
-                                <rect key="frame" x="16" y="274.5" width="343" height="335.5"/>
+                                <rect key="frame" x="16" y="275" width="343" height="335"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1354,7 +1363,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spell Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zog-pz-aMV">
-                                <rect key="frame" x="16" y="247" width="343" height="20.5"/>
+                                <rect key="frame" x="16" y="247" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1420,6 +1429,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="FbZ-d9-z1z"/>
-        <segue reference="qP7-ew-iUZ"/>
+        <segue reference="czW-bO-woR"/>
     </inferredMetricsTieBreakers>
 </document>
