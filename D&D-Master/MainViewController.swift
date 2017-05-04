@@ -36,14 +36,7 @@ struct arrClases {
 
 
 class MainViewController: UITableViewController{
-    //Outlets del detail
-    
-    
    
-    
-    
-    
-    //
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var campaign: UITextField!
     @IBOutlet weak var experence: UITextField!
@@ -430,9 +423,11 @@ class MainViewController: UITableViewController{
         let sqlInserta = "INSERT INTO personaje (nombre, str, dex,cons,intell,wis,charisma,lenguajes,vision,tamano,speed,proficiencias,hitdice,diceroll,skillnumber,equipo,savingthrows,clase,subclase,raza,background,nivel,skills,exp,region,feature,trait1,trait2,ideal,flaw,sexo) VALUES ('\(nombre)',\(str),\(dex),\(cons),\(intell),\(wis),\(charisma),'\(lenguajes)','\(vision)','\(tamano)','\(speed)','\(proficiencias)',\(hitdice),\(diceroll),\(skillnumber),'\(equipo)','\(savingtrhows)','\(clase)','\(subclase)','\(raza)','\(background)','\(nivel)','\(skills)',\(exp),'\(reg)','\(feat)','\(trait1)','\(trait2)','\(idea)','\(fla)','\(sexo)');"
         var error: UnsafeMutablePointer<Int8>? = nil
         if sqlite3_exec(baseDatos, sqlInserta, nil, nil, &error) != SQLITE_OK {
+            
             print("Error al insertar datos)")
         }else{
             print("todo bien")
+            
         }
     
     }
