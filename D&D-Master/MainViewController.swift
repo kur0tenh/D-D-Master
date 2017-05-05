@@ -56,6 +56,15 @@ class MainViewController: UITableViewController{
         }
         return nil
     }
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
     
     func abrirBaseDatos() -> Bool {
         if let path = obtenerPath("baseDatos.txt") {
@@ -226,6 +235,7 @@ class MainViewController: UITableViewController{
         super.viewDidLoad()
         
         _ = abrirBaseDatos()
+        self.hideKeyboardWhenTappedAround()
         /*
         if(UserDefaults.standard.bool(forKey: "HasLaunchedOnce"))
         {
@@ -241,7 +251,7 @@ class MainViewController: UITableViewController{
         */
         consultarClases()
         
-            print("Me gustan las altas")
+            print("")
         }
  
     func statsMaximos(){
