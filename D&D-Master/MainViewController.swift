@@ -8,6 +8,7 @@
 
 import UIKit
 struct arrClases {
+    static var stastSeleccionados = [String]()
     static var lolClases = [String]()
     static var subclases = [String]()
     static var selected = 0
@@ -347,6 +348,7 @@ class MainViewController: UITableViewController{
     }
     @IBAction func crearPersona(_ sender: Any)
     {
+        let experiences = [0,300,900,2700,6500,14000,23000,34000,48000,64000,85000.100000,120000,140000,165000,195000,225000,265000,305000,355000]
         sumarVariables()
         let nombre = name.text!
         let str = arrClases.strength
@@ -380,6 +382,7 @@ class MainViewController: UITableViewController{
         let sexo = sex.titleForSegment(at: sex.selectedSegmentIndex)!
         let sqlConsulta = "SELECT * FROM razas Where nombre = '\(arrClases.Raza)'"
         var declaracion: OpaquePointer? = nil
+        let exp = experiences[nivel-1]
         if sqlite3_prepare_v2(baseDatos, sqlConsulta, -1, &declaracion, nil) == SQLITE_OK
         {
             while sqlite3_step(declaracion) == SQLITE_ROW
@@ -388,7 +391,7 @@ class MainViewController: UITableViewController{
                 vision = String.init(cString: sqlite3_column_text(declaracion, 8))
                 tamano = String.init(cString: sqlite3_column_text(declaracion, 9))
                 speed = String.init(cString: sqlite3_column_text(declaracion, 10))
-                proficiencias = proficiencias+"-"+String.init(cString: sqlite3_column_text(declaracion, 11))
+                proficiencias = String.init(cString: sqlite3_column_text(declaracion, 11))
             }
         }
         let sqlConsulta2 = "SELECT * FROM clases Where nombre = '\(arrClases.Clase)'"
@@ -419,10 +422,13 @@ class MainViewController: UITableViewController{
                 
             }
         }
-        let sqlInserta = "INSERT INTO personaje (nombre, str, dex,cons,intell,wis,charisma,lenguajes,vision,tamano,speed,proficiencias,hitdice,diceroll,skillnumber,equipo,savingthrows,clase,subclase,raza,background,nivel,skills,exp,region,feature,trait1,trait2,ideal,flaw,sexo) VALUES ('\(nombre)',\(str),\(dex),\(cons),\(intell),\(wis),\(charisma),'\(lenguajes)','\(vision)','\(tamano)','\(speed)','\(proficiencias)',\(hitdice),\(diceroll),\(skillnumber),'\(equipo)','\(savingtrhows)','\(clase)','\(subclase)','\(raza)','\(background)','\(nivel)','\(skills)','\(reg)','\(feat)','\(trait1)','\(trait2)','\(idea)','\(fla)','\(sexo)');"
+        let sqlInserta = "INSERT INTO personaje (nombre, str, dex,cons,intell,wis,charisma,lenguajes,vision,tamano,speed,proficiencias,hitdice,diceroll,skillnumber,equipo,savingthrows,clase,subclase,raza,background,nivel,skills,exp,region,feature,trait1,trait2,ideal,flaw,sexo,spells) VALUES ('\(nombre)',\(str),\(dex),\(cons),\(intell),\(wis),\(charisma),'\(lenguajes)','\(vision)','\(tamano)','\(speed)','\(proficiencias)',\(hitdice),\(diceroll),\(skillnumber),'\(equipo)','\(savingtrhows)','\(clase)','\(subclase)','\(raza)','\(background)','\(nivel)','\(skills)','\(exp)','\(reg)','\(feat)','\(trait1)','\(trait2)','\(idea)','\(fla)','\(sexo)',' ');"
         var error: UnsafeMutablePointer<Int8>? = nil
         if sqlite3_exec(baseDatos, sqlInserta, nil, nil, &error) != SQLITE_OK {
-            
+            let controller = UIAlertController(title: "Couldn't create character", message: "Some of the attributes are wrong", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+            controller.addAction(ok)
+            present(controller, animated: true, completion: nil)
             print("Error al insertar datos)")
         }else{
             print("todo bien")

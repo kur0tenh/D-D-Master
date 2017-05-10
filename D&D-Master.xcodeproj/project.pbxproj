@@ -15,6 +15,7 @@
 		312806B41EB9797F003BBFC7 /* SeeSpells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312806B31EB9797F003BBFC7 /* SeeSpells.swift */; };
 		31B8E7971E8219480060C030 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 31B8E7961E8219480060C030 /* libsqlite3.tbd */; };
 		31C9641C1E8200B00072F37F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C9641B1E8200B00072F37F /* MainViewController.swift */; };
+		A20A594D1EC3884300309C43 /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20A594C1EC3884300309C43 /* detailViewController.swift */; };
 		A20FCFBF1E81B6EC00557A5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20FCFBE1E81B6EC00557A5C /* AppDelegate.swift */; };
 		A20FCFC61E81B6EC00557A5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A20FCFC41E81B6EC00557A5C /* Main.storyboard */; };
 		A20FCFC81E81B6EC00557A5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A20FCFC71E81B6EC00557A5C /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		A20FCFE11E81B6EC00557A5C /* D_D_MasterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20FCFE01E81B6EC00557A5C /* D_D_MasterUITests.swift */; };
 		A2367DF11E82F9B9008BFC43 /* puente.m in Sources */ = {isa = PBXBuildFile; fileRef = A2367DF01E82F9B9008BFC43 /* puente.m */; };
 		A237A4091E832087004D4E22 /* PickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A237A4081E832087004D4E22 /* PickerController.swift */; };
+		A24D820A1EC35E1200A8DAA7 /* LevelUpTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D82091EC35E1200A8DAA7 /* LevelUpTableController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,7 @@
 		31B8E7961E8219480060C030 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		31B8E7981E821B260060C030 /* D&D-Master-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "D&D-Master-Bridging-Header.h"; sourceTree = "<group>"; };
 		31C9641B1E8200B00072F37F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		A20A594C1EC3884300309C43 /* detailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
 		A20FCFBB1E81B6EC00557A5C /* D&D-Master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "D&D-Master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A20FCFBE1E81B6EC00557A5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A20FCFC51E81B6EC00557A5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,6 +69,7 @@
 		A20FCFE21E81B6EC00557A5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2367DF01E82F9B9008BFC43 /* puente.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = puente.m; sourceTree = "<group>"; };
 		A237A4081E832087004D4E22 /* PickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerController.swift; sourceTree = "<group>"; };
+		A24D82091EC35E1200A8DAA7 /* LevelUpTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LevelUpTableController.swift; path = ../LevelUpTableController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 		A20FCFBD1E81B6EC00557A5C /* D&D-Master */ = {
 			isa = PBXGroup;
 			children = (
+				A20A594C1EC3884300309C43 /* detailViewController.swift */,
 				A20FCFBE1E81B6EC00557A5C /* AppDelegate.swift */,
 				31C9641B1E8200B00072F37F /* MainViewController.swift */,
 				A20FCFC41E81B6EC00557A5C /* Main.storyboard */,
@@ -140,6 +145,7 @@
 				A2367DF01E82F9B9008BFC43 /* puente.m */,
 				312806A91EB953F3003BBFC7 /* character.swift */,
 				312806AB1EB965BD003BBFC7 /* seeCharacter.swift */,
+				A24D82091EC35E1200A8DAA7 /* LevelUpTableController.swift */,
 				A20FCFD41E81B6EC00557A5C /* D&D-MasterTests */,
 			);
 			path = "D&D-Master";
@@ -302,6 +308,7 @@
 				312806B01EB9739A003BBFC7 /* seeMonster.swift in Sources */,
 				A20FCFBF1E81B6EC00557A5C /* AppDelegate.swift in Sources */,
 				A2367DF11E82F9B9008BFC43 /* puente.m in Sources */,
+				A24D820A1EC35E1200A8DAA7 /* LevelUpTableController.swift in Sources */,
 				31C9641C1E8200B00072F37F /* MainViewController.swift in Sources */,
 				312806AE1EB96FE1003BBFC7 /* MonsterViewController.swift in Sources */,
 				312806AC1EB965BD003BBFC7 /* seeCharacter.swift in Sources */,
@@ -309,6 +316,7 @@
 				312806B21EB97861003BBFC7 /* SpellViewController.swift in Sources */,
 				312806AA1EB953F3003BBFC7 /* character.swift in Sources */,
 				A237A4091E832087004D4E22 /* PickerController.swift in Sources */,
+				A20A594D1EC3884300309C43 /* detailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

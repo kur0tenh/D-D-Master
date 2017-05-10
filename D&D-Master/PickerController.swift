@@ -73,6 +73,31 @@ class PickerController: UIViewController, UIPickerViewDataSource, UIPickerViewDe
             if arrClases.skillMight{
                 arrClases.skill4 = arrAtributes[celda]}
         }
+        if arrClases.selected == 100{
+            arrStatSelected.strength = Int(arrAtributes[celda])!
+            arrClases.stastSeleccionados.append(arrAtributes[celda])
+        }
+        if arrClases.selected == 110{
+            arrStatSelected.constitution = Int(arrAtributes[celda])!
+            arrClases.stastSeleccionados.append(arrAtributes[celda])
+        }
+        if arrClases.selected == 120{
+            arrStatSelected.dexterity = Int(arrAtributes[celda])!
+            arrClases.stastSeleccionados.append(arrAtributes[celda])
+        }
+        if arrClases.selected == 130{
+            arrStatSelected.intelligence = Int(arrAtributes[celda])!
+            arrClases.stastSeleccionados.append(arrAtributes[celda])
+        }
+        if arrClases.selected == 140{
+            arrStatSelected.wisdom = Int(arrAtributes[celda])!
+            arrClases.stastSeleccionados.append(arrAtributes[celda])
+        }
+        if arrClases.selected == 150{
+            arrStatSelected.charisma = Int(arrAtributes[celda])!
+            arrClases.stastSeleccionados.append(arrAtributes[celda])
+        }
+
         
         self.dismiss(animated: true, completion: nil)
 
@@ -101,8 +126,6 @@ class PickerController: UIViewController, UIPickerViewDataSource, UIPickerViewDe
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       
         print("\(arrClases.lolClases)")
         self.pvPaises.dataSource = self
         self.pvPaises.delegate = self
