@@ -35,6 +35,16 @@ struct arrStats {
 }
 class SeeCharacter: UIViewController  {
     
+    @IBAction func deletePersona(_ sender: Any) {
+        let sqlConsulta2 = "DELETE * FROM personaje WHERE nombre == '\(arrStats.nombre)'"
+        var declaracion2: OpaquePointer? = nil
+        print(sqlConsulta2)
+        if sqlite3_prepare_v2(baseDatos, sqlConsulta2, -1, &declaracion2, nil) == SQLITE_OK
+        {
+            print("se eliminò el personaje")
+        }
+        
+    }
     @IBOutlet weak var levelo: UILabel!
     @IBOutlet weak var subclasso: UILabel!
     @IBOutlet weak var speedo: UILabel!
@@ -49,8 +59,8 @@ class SeeCharacter: UIViewController  {
     @IBOutlet weak var intelligenso: UILabel!
     @IBOutlet weak var charismao: UILabel!
     @IBOutlet weak var hitdiceo: UILabel!
-    @IBOutlet weak var experienceo: UILabel!
     @IBOutlet weak var dicerollo: UILabel!
+   
     @IBOutlet weak var equipmento: UITextView!
     var baseDatos: OpaquePointer? = nil
     func obtenerPath(_	salida:	String)	->	URL?	{
@@ -95,7 +105,7 @@ class SeeCharacter: UIViewController  {
                 intelligenso.text = "Intelligence: " + String.init(cString: sqlite3_column_text(declaracion, 4))
                 charismao.text = "Charisma: " + String.init(cString: sqlite3_column_text(declaracion, 6))
                 hitdiceo.text = "Hitdice: " + String.init(cString: sqlite3_column_text(declaracion, 12))
-                experienceo.text = "Experience: " + String.init(cString: sqlite3_column_text(declaracion, 23))
+                //experienceo.text = "Experience: " + String.init(cString: sqlite3_column_text(declaracion, 23))
                 dicerollo.text = "Diceroll: " + String.init(cString: sqlite3_column_text(declaracion, 13))
                 equipmento.text = String.init(cString: sqlite3_column_text(declaracion, 15))
                 subclasso.text = "Subclass: " + String.init(cString: sqlite3_column_text(declaracion, 18))
@@ -172,7 +182,7 @@ class SeeCharacter: UIViewController  {
                 intelligenso.text = "Intelligence: " + String.init(cString: sqlite3_column_text(declaracion, 4))
                 charismao.text = "Charisma: " + String.init(cString: sqlite3_column_text(declaracion, 6))
                 hitdiceo.text = "Hitdice: " + String.init(cString: sqlite3_column_text(declaracion, 12))
-                experienceo.text = "Experience: " + String.init(cString: sqlite3_column_text(declaracion, 23))
+                //experienceo.text = "Experience: " + String.init(cString: sqlite3_column_text(declaracion, 23))
                 dicerollo.text = "Diceroll: " + String.init(cString: sqlite3_column_text(declaracion, 13))
                 equipmento.text = String.init(cString: sqlite3_column_text(declaracion, 15))
                 subclasso.text = "Subclass: " + String.init(cString: sqlite3_column_text(declaracion, 18))
