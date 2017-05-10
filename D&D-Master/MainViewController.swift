@@ -31,15 +31,10 @@ struct arrClases {
     static var celda: UITableViewCell? = nil
  
 }
-
-
-
-
 class MainViewController: UITableViewController{
    
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var campaign: UITextField!
-    @IBOutlet weak var experence: UITextField!
     @IBOutlet weak var sex: UISegmentedControl!
     @IBOutlet weak var flaw: UILabel!
     @IBOutlet weak var ideal: UITextField!
@@ -76,9 +71,6 @@ class MainViewController: UITableViewController{
         }
         return false
     }
-    
-    
-    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         arrClases.celda = tableView.cellForRow(at: indexPath)
@@ -144,8 +136,6 @@ class MainViewController: UITableViewController{
             arrClases.selected = 15
         }
     }
-
-    
     
     @IBOutlet weak var SelectionClass: UILabel!
     func consultarClases() {
@@ -381,7 +371,6 @@ class MainViewController: UITableViewController{
         let background = arrClases.Background
         let nivel = arrClases.nivel
         var skills = ("\(arrClases.skill1)-\(arrClases.skill2)-\(arrClases.skill3)-\(arrClases.skill4)")
-        let exp = experence.text!
         let reg = region.text!
         let feat = feature.text!
         let trait1 = traitone.text!
@@ -430,7 +419,7 @@ class MainViewController: UITableViewController{
                 
             }
         }
-        let sqlInserta = "INSERT INTO personaje (nombre, str, dex,cons,intell,wis,charisma,lenguajes,vision,tamano,speed,proficiencias,hitdice,diceroll,skillnumber,equipo,savingthrows,clase,subclase,raza,background,nivel,skills,exp,region,feature,trait1,trait2,ideal,flaw,sexo) VALUES ('\(nombre)',\(str),\(dex),\(cons),\(intell),\(wis),\(charisma),'\(lenguajes)','\(vision)','\(tamano)','\(speed)','\(proficiencias)',\(hitdice),\(diceroll),\(skillnumber),'\(equipo)','\(savingtrhows)','\(clase)','\(subclase)','\(raza)','\(background)','\(nivel)','\(skills)',\(exp),'\(reg)','\(feat)','\(trait1)','\(trait2)','\(idea)','\(fla)','\(sexo)');"
+        let sqlInserta = "INSERT INTO personaje (nombre, str, dex,cons,intell,wis,charisma,lenguajes,vision,tamano,speed,proficiencias,hitdice,diceroll,skillnumber,equipo,savingthrows,clase,subclase,raza,background,nivel,skills,exp,region,feature,trait1,trait2,ideal,flaw,sexo) VALUES ('\(nombre)',\(str),\(dex),\(cons),\(intell),\(wis),\(charisma),'\(lenguajes)','\(vision)','\(tamano)','\(speed)','\(proficiencias)',\(hitdice),\(diceroll),\(skillnumber),'\(equipo)','\(savingtrhows)','\(clase)','\(subclase)','\(raza)','\(background)','\(nivel)','\(skills)','\(reg)','\(feat)','\(trait1)','\(trait2)','\(idea)','\(fla)','\(sexo)');"
         var error: UnsafeMutablePointer<Int8>? = nil
         if sqlite3_exec(baseDatos, sqlInserta, nil, nil, &error) != SQLITE_OK {
             
