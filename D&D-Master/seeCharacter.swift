@@ -35,16 +35,7 @@ struct arrStats {
 }
 class SeeCharacter: UIViewController  {
     
-    @IBAction func deletePersona(_ sender: Any) {
-        let sqlConsulta2 = "DELETE * FROM personaje WHERE nombre == '\(arrStats.nombre)'"
-        var declaracion2: OpaquePointer? = nil
-        print(sqlConsulta2)
-        if sqlite3_prepare_v2(baseDatos, sqlConsulta2, -1, &declaracion2, nil) == SQLITE_OK
-        {
-            print("se eliminò el personaje")
-        }
-        
-    }
+   
     @IBOutlet weak var levelo: UILabel!
     @IBOutlet weak var subclasso: UILabel!
     @IBOutlet weak var speedo: UILabel!
