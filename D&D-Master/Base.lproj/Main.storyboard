@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JiJ-uA-8bw">
-                            <rect key="frame" x="0.0" y="72" width="768" height="44"/>
+                            <rect key="frame" x="0.0" y="136" width="768" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="New Character"/>
                             <connections>
@@ -970,15 +970,6 @@
                                     <segue destination="bBk-Ir-BfW" kind="show" id="6F0-zJ-wDB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEO-9A-lwR">
-                                <rect key="frame" x="27" y="176" width="45" height="30"/>
-                                <color key="tintColor" red="1" green="0.0" blue="0.051290923323739968" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Delete"/>
-                                <connections>
-                                    <action selector="deletePersona:" destination="oOh-PK-dCd" eventType="touchUpInside" id="Soe-IF-WfT"/>
-                                    <segue destination="49e-Tb-3d3" kind="presentation" modalPresentationStyle="currentContext" id="ieh-8I-m5g"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kF2-jk-oG1">
                                 <rect key="frame" x="0.0" y="185" width="768" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1004,7 +995,6 @@
                             <constraint firstItem="oRs-H7-EfQ" firstAttribute="trailing" secondItem="0t4-5S-PAR" secondAttribute="trailing" id="Ix0-Vq-oKP"/>
                             <constraint firstItem="wIh-jN-KOx" firstAttribute="top" secondItem="kF2-jk-oG1" secondAttribute="bottom" constant="18" id="JmN-nL-nu9"/>
                             <constraint firstItem="wtO-Ha-Th0" firstAttribute="trailing" secondItem="wIh-jN-KOx" secondAttribute="trailing" id="LGn-0W-6DW"/>
-                            <constraint firstItem="bEO-9A-lwR" firstAttribute="bottom" secondItem="kF2-jk-oG1" secondAttribute="bottom" id="MT5-qb-NEb"/>
                             <constraint firstItem="Azh-rU-Tef" firstAttribute="trailing" secondItem="sF2-jS-5ms" secondAttribute="trailing" id="NOh-Ux-3e3"/>
                             <constraint firstItem="Frc-li-Sej" firstAttribute="top" secondItem="8z6-jU-qfD" secondAttribute="top" id="OW6-SL-iYD"/>
                             <constraint firstItem="fEr-B1-C49" firstAttribute="leading" secondItem="Sal-ij-jAu" secondAttribute="leading" id="Ois-rb-5t0"/>
@@ -1033,7 +1023,6 @@
                             <constraint firstItem="0t4-5S-PAR" firstAttribute="baseline" secondItem="wIh-jN-KOx" secondAttribute="baseline" id="k3F-ks-dsF"/>
                             <constraint firstItem="fpR-GA-C0O" firstAttribute="top" secondItem="aCe-Wa-HA8" secondAttribute="bottom" constant="28" id="lI9-HJ-vkK"/>
                             <constraint firstItem="a4X-aE-dol" firstAttribute="leading" secondItem="jvi-I6-Rg3" secondAttribute="leading" id="mcD-51-vtc"/>
-                            <constraint firstItem="bEO-9A-lwR" firstAttribute="centerX" secondItem="Frc-li-Sej" secondAttribute="centerX" id="mjr-33-NyK"/>
                             <constraint firstItem="Azh-rU-Tef" firstAttribute="top" secondItem="ffc-Md-YTK" secondAttribute="bottom" constant="17" id="na1-wf-OHU"/>
                             <constraint firstItem="oRs-H7-EfQ" firstAttribute="leading" secondItem="0t4-5S-PAR" secondAttribute="leading" id="p55-TL-ilo"/>
                             <constraint firstItem="wtO-Ha-Th0" firstAttribute="leading" secondItem="oRs-H7-EfQ" secondAttribute="trailing" constant="28" id="pIz-9S-CeE"/>
@@ -1060,7 +1049,7 @@
                         <outlet property="equipmento" destination="aCe-Wa-HA8" id="gF1-oo-j4D"/>
                         <outlet property="hitdiceo" destination="jvi-I6-Rg3" id="9Ae-qZ-shV"/>
                         <outlet property="intelligenso" destination="wIh-jN-KOx" id="41y-JG-saq"/>
-                        <outlet property="levelo" destination="kF2-jk-oG1" id="m0D-gi-hpt"/>
+                        <outlet property="levelo" destination="kF2-jk-oG1" id="gaN-0P-CPW"/>
                         <outlet property="nameo" destination="8z6-jU-qfD" id="hqd-dt-au7"/>
                         <outlet property="raceo" destination="ffc-Md-YTK" id="Cjy-6S-ZI9"/>
                         <outlet property="speedo" destination="fEr-B1-C49" id="PTv-Wu-3gh"/>
@@ -1082,7 +1071,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BZV-BQ-UI8">
-                            <rect key="frame" x="0.0" y="264" width="768" height="44"/>
+                            <rect key="frame" x="0.0" y="328" width="768" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Accept"/>
                             <connections>
@@ -1824,7 +1813,7 @@
         <image name="spellBook" width="166" height="113"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ieh-8I-m5g"/>
+        <segue reference="U7o-dz-NYb"/>
         <segue reference="yrG-ZT-cTJ"/>
     </inferredMetricsTieBreakers>
 </document>

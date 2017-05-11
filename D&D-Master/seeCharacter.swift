@@ -36,6 +36,7 @@ struct arrStats {
 class SeeCharacter: UIViewController  {
     
    
+    
     @IBOutlet weak var levelo: UILabel!
     @IBOutlet weak var subclasso: UILabel!
     @IBOutlet weak var speedo: UILabel!
